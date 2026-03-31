@@ -46,6 +46,7 @@ class PoolCard extends HTMLElement {
 
     // DOM einmalig aufbauen – kein ha-card, kein Shadow DOM
     if (!this.content) {
+      this._lastPumpOn = undefined;
       this.innerHTML = `
         <style>
           pool-custom-card {
@@ -160,14 +161,21 @@ class PoolCard extends HTMLElement {
     if (on) {
       badge.textContent = "Pumpe läuft"; badge.className = "badge";
       btn.textContent = "Pumpe ausschalten"; btn.className = "pump-btn on";
-      at.style.display = "block"; af.style.display = "block";
-      at.style.animation = "pcc-fwd 0.8s linear infinite";
-      af.style.animation = "pcc-bwd 0.8s linear infinite";
     } else {
       badge.textContent = "Pumpe aus"; badge.className = "badge off";
       btn.textContent = "Pumpe einschalten"; btn.className = "pump-btn";
-      at.style.display = "none"; af.style.display = "none";
-      at.style.animation = "none"; af.style.animation = "none";
+    }
+    // Animation nur ändern wenn Pump-Zustand sich wirklich geändert hat
+    if (on !== this._lastPumpOn) {
+      this._lastPumpOn = on;
+      if (on) {
+        at.style.display = "block"; af.style.display = "block";
+        at.style.animation = "pcc-fwd 0.8s linear infinite";
+        af.style.animation = "pcc-bwd 0.8s linear infinite";
+      } else {
+        at.style.display = "none"; af.style.display = "none";
+        at.style.animation = "none"; af.style.animation = "none";
+      }
     }
   }
 }
