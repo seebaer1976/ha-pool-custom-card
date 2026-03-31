@@ -1,5 +1,5 @@
 {
-  "name": "HA Pool Custom Card",
-  "render_readme": true,
+  "name": "Pool Custom Card",
+  "render_readme": false,
   "filename": "pool-custom-card.js"
 }

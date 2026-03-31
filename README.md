@@ -1,27 +1,21 @@
-# ha-pool-custom-card
+# Pool Custom Card
 
 Eine schematische Pool-Übersicht für Home Assistant mit animiertem Filterkreislauf.
 
-## Features
-
-- Schematische Darstellung von Pool und Sandfilter
-- Animierte Rohrleitungen (Vor- und Rücklauf) wenn Pumpe läuft
-- Wassertemperatur, pH-Wert und Füllstand direkt im Pool angezeigt
-- Filterdruck und Durchfluss am Sandfilter
-- Grafischer Konfigurations-Editor in HA (kein YAML nötig)
-- Automatische Ressourcen-Registrierung
-
 ## Installation via HACS
 
-1. HACS → Frontend → Menü (⋮) → **Custom repositories**
-2. URL: `https://github.com/youruser/ha-pool-custom-card`
-3. Kategorie: **Lovelace**
-4. **Installieren** → Browser-Cache leeren
+1. HACS → Frontend → Menü (⋮) → Custom repositories
+2. URL: `https://github.com/seebaer1976/ha-pool-custom-card`, Kategorie: **Lovelace**
+3. Installieren
+4. Home Assistant neu laden
+
+Die Karte registriert sich automatisch – kein manuelles Eintragen der Ressource nötig.
 
 ## Manuelle Installation
 
-1. `pool-custom-card.js` nach `config/www/ha-pool-custom-card/pool-custom-card.js` kopieren
-2. HA neu starten
+1. `pool-custom-card.js` nach `config/www/pool-custom-card/pool-custom-card.js` kopieren
+2. Dashboard → Ressourcen → `/local/pool-custom-card/pool-custom-card.js` als `JavaScript-Modul`
+3. HA neu laden
 
 ## Konfiguration
 
@@ -35,13 +29,13 @@ flow_entity: sensor.pool_flow_rate
 pump_entity: switch.pool_pump
 ```
 
-## Optionen
+## Sensoren
 
 | Option | Beschreibung | Pflicht |
 |---|---|---|
-| `temp_entity` | Wassertemperatur (sensor) | Ja |
-| `ph_entity` | pH-Wert (sensor) | Nein |
-| `level_entity` | Füllstand in % (sensor) | Nein |
-| `pressure_entity` | Filterdruck in bar (sensor) | Nein |
-| `flow_entity` | Durchfluss in m³/h (sensor) | Nein |
+| `temp_entity` | Wassertemperatur | Ja |
+| `ph_entity` | pH-Wert | Nein |
+| `level_entity` | Füllstand in % | Nein |
+| `pressure_entity` | Filterdruck in bar | Nein |
+| `flow_entity` | Durchfluss in m³/h | Nein |
 | `pump_entity` | Filterpumpe (switch) | Nein |
