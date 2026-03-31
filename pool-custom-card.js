@@ -92,8 +92,8 @@ class PoolCard extends HTMLElement {
             <text x="465" y="172" text-anchor="middle" font-size="10" fill="#0F6E56" id="pcc-flow">—</text>
             <path d="M260 95 C330 95 360 95 400 105" fill="none" stroke="#378ADD" stroke-width="3" stroke-linecap="round"/>
             <path id="pcc-at" d="M260 95 C330 95 360 95 400 105" fill="none" stroke="#85B7EB" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-            <path d="M400 150 C360 150 330 158 260 158" fill="none" stroke="#1D9E75" stroke-width="3" stroke-linecap="round"/>
-            <path id="pcc-af" d="M400 150 C360 150 330 158 260 158" fill="none" stroke="#5DCAA5" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+            <path d="M260 158 C330 158 360 150 400 150" fill="none" stroke="#1D9E75" stroke-width="3" stroke-linecap="round"/>
+            <path id="pcc-af" d="M260 158 C330 158 360 150 400 150" fill="none" stroke="#5DCAA5" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
             <text x="330" y="89" text-anchor="middle" font-size="10" fill="#185FA5">Pool → Filter</text>
             <text x="330" y="172" text-anchor="middle" font-size="10" fill="#0F6E56" id="pcc-flowlbl">Filter → Pool</text>
             <circle cx="260" cy="95"  r="4" fill="#378ADD"/>
@@ -159,9 +159,10 @@ class PoolCard extends HTMLElement {
       badge.textContent = "Pumpe läuft"; badge.className = "badge";
       btn.textContent = "Pumpe ausschalten"; btn.className = "pump-btn on";
       at.style.display = "block"; af.style.display = "block";
-      // Pool→Filter: Pfad läuft links→rechts, dashoffset nimmt ab → fwd
+      // Pool→Filter: Pfad links→rechts, fwd (dashoffset nimmt ab)
       at.style.animation = "pcc-fwd 0.8s linear infinite";
-      // Filter→Pool: Pfad läuft rechts→links (x=400→x=260), dashoffset nimmt zu → bwd
+      // Filter→Pool: Pfad auch links→rechts gezeichnet, aber wir wollen Fluss rechts→links
+      // dashoffset wächst → Strich läuft rückwärts entlang des Pfads = rechts→links ✓
       af.style.animation = "pcc-bwd 0.8s linear infinite";
     } else {
       badge.textContent = "Pumpe aus"; badge.className = "badge off";
