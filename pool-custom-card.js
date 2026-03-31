@@ -71,8 +71,6 @@ class PoolCard extends HTMLElement {
           pool-custom-card .pump-btn.on { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
           @keyframes pcc-fwd { to { stroke-dashoffset: -20; } }
           @keyframes pcc-bwd { to { stroke-dashoffset: 20; } }
-          pool-custom-card .afwd { animation: pcc-fwd 0.8s linear infinite; }
-          pool-custom-card .abwd { animation: pcc-bwd 0.8s linear infinite; }
         </style>
         <div class="header">
           <span class="title">Pool</span>
@@ -161,12 +159,15 @@ class PoolCard extends HTMLElement {
       badge.textContent = "Pumpe läuft"; badge.className = "badge";
       btn.textContent = "Pumpe ausschalten"; btn.className = "pump-btn on";
       at.style.display = "block"; af.style.display = "block";
-      at.setAttribute("class", "afwd"); af.setAttribute("class", "abwd");
+      // Pool→Filter: Pfad läuft links→rechts, dashoffset nimmt ab → fwd
+      at.style.animation = "pcc-fwd 0.8s linear infinite";
+      // Filter→Pool: Pfad läuft rechts→links (x=400→x=260), dashoffset nimmt zu → bwd
+      af.style.animation = "pcc-bwd 0.8s linear infinite";
     } else {
       badge.textContent = "Pumpe aus"; badge.className = "badge off";
       btn.textContent = "Pumpe einschalten"; btn.className = "pump-btn";
       at.style.display = "none"; af.style.display = "none";
-      at.setAttribute("class", ""); af.setAttribute("class", "");
+      at.style.animation = "none"; af.style.animation = "none";
     }
   }
 }
