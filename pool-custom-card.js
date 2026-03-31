@@ -9,21 +9,21 @@ const _loadHaComponents = () => {
 };
 
 const POOL_SCHEMA = [
-  { name: "temp_entity",     required: true, selector: { entity: { device_class: "temperature" } } },
-  { name: "ph_entity",                       selector: { entity: { domain: "sensor" } } },
-  { name: "level_entity",                    selector: { entity: { device_class: ["moisture","volume","volume_storage","distance"] } } },
-  { name: "pressure_entity",                 selector: { entity: { device_class: "pressure" } } },
-  { name: "flow_entity",                     selector: { entity: { domain: "sensor" } } },
-  { name: "pump_entity",                     selector: { entity: { domain: "switch" } } },
+  { name: "temp_entity", required: true, selector: { entity: { device_class: "temperature" } } },
+  { name: "ph_entity", selector: { entity: { domain: "sensor" } } },
+  { name: "level_entity", selector: { entity: { device_class: ["moisture", "volume", "volume_storage", "distance"] } } },
+  { name: "pressure_entity", selector: { entity: { device_class: "pressure" } } },
+  { name: "flow_entity", selector: { entity: { domain: "sensor" } } },
+  { name: "pump_entity", selector: { entity: { domain: "switch" } } },
 ];
 
 const POOL_LABELS = {
-  temp_entity:     "Wassertemperatur",
-  ph_entity:       "pH-Wert",
-  level_entity:    "Füllstand",
+  temp_entity: "Wassertemperatur",
+  ph_entity: "pH-Wert",
+  level_entity: "Füllstand",
   pressure_entity: "Filterdruck",
-  flow_entity:     "Durchfluss (m³/h)",
-  pump_entity:     "Filterpumpe (Switch)",
+  flow_entity: "Durchfluss (m³/h)",
+  pump_entity: "Filterpumpe (Switch)",
 };
 
 // ── Hauptkarte ────────────────────────────────────────────────────────────────
@@ -34,7 +34,7 @@ class PoolCard extends HTMLElement {
   }
 
   static getStubConfig() {
-    return { temp_entity:"", ph_entity:"", level_entity:"", pressure_entity:"", flow_entity:"", pump_entity:"" };
+    return { temp_entity: "", ph_entity: "", level_entity: "", pressure_entity: "", flow_entity: "", pump_entity: "" };
   }
 
   setConfig(config) {
@@ -135,38 +135,38 @@ class PoolCard extends HTMLElement {
 
   _update() {
     if (!this.content) return;
-    const g   = (id) => this.querySelector("#" + id);
-    const fmt = (v, d=1) => parseFloat(v).toFixed(d);
+    const g = (id) => this.querySelector("#" + id);
+    const fmt = (v, d = 1) => parseFloat(v).toFixed(d);
     const temp = this._val(this.config?.temp_entity);
-    const ph   = this._val(this.config?.ph_entity);
-    const lev  = this._val(this.config?.level_entity);
+    const ph = this._val(this.config?.ph_entity);
+    const lev = this._val(this.config?.level_entity);
     const pres = this._val(this.config?.pressure_entity);
     const flow = this._val(this.config?.flow_entity);
-    const on   = this._pumpOn();
+    const on = this._pumpOn();
 
-    g("pcc-temp").textContent  = temp !== null ? fmt(temp)+"°C"                          : "—°C";
-    g("pcc-ph").textContent    = ph   !== null ? "pH "+fmt(ph)                           : "pH —";
-    g("pcc-level").textContent = lev  !== null ? "Stand "+Math.round(parseFloat(lev))+"%" : "Stand —%";
-    g("pcc-pres").textContent  = pres !== null ? fmt(pres)+" bar"                        : "— bar";
-    g("pcc-vtemp").textContent  = temp !== null ? fmt(temp)  : "—";
-    g("pcc-vph").textContent    = ph   !== null ? fmt(ph)    : "—";
-    g("pcc-vlevel").textContent = lev  !== null ? Math.round(parseFloat(lev)).toString()  : "—";
-    g("pcc-vpres").textContent  = pres !== null ? fmt(pres)  : "—";
-    const ft = flow !== null ? fmt(flow)+" m³/h" : "—";
-    g("pcc-flow").textContent    = on ? ft : "—";
+    g("pcc-temp").textContent = temp !== null ? fmt(temp) + "°C" : "—°C";
+    g("pcc-ph").textContent = ph !== null ? "pH " + fmt(ph) : "pH —";
+    g("pcc-level").textContent = lev !== null ? "Stand " + Math.round(parseFloat(lev)) + "%" : "Stand —%";
+    g("pcc-pres").textContent = pres !== null ? fmt(pres) + " bar" : "— bar";
+    g("pcc-vtemp").textContent = temp !== null ? fmt(temp) : "—";
+    g("pcc-vph").textContent = ph !== null ? fmt(ph) : "—";
+    g("pcc-vlevel").textContent = lev !== null ? Math.round(parseFloat(lev)).toString() : "—";
+    g("pcc-vpres").textContent = pres !== null ? fmt(pres) : "—";
+    const ft = flow !== null ? fmt(flow) + " m³/h" : "—";
+    g("pcc-flow").textContent = on ? ft : "—";
     g("pcc-flowlbl").textContent = on ? ft : "Filter → Pool";
 
     const badge = g("pcc-badge"), btn = g("pcc-pbtn"), at = g("pcc-at"), af = g("pcc-af");
     if (on) {
-      badge.textContent="Pumpe läuft";     badge.className="badge";
-      btn.textContent="Pumpe ausschalten"; btn.className="pump-btn on";
-      at.style.display="block"; af.style.display="block";
-      at.className="afwd"; af.className="abwd";
+      badge.textContent = "Pumpe läuft"; badge.className = "badge";
+      btn.textContent = "Pumpe ausschalten"; btn.className = "pump-btn on";
+      at.style.display = "block"; af.style.display = "block";
+      at.setAttribute("class", "afwd"); af.setAttribute("class", "abwd");
     } else {
-      badge.textContent="Pumpe aus";       badge.className="badge off";
-      btn.textContent="Pumpe einschalten"; btn.className="pump-btn";
-      at.style.display="none"; af.style.display="none";
-      at.className=""; af.className="";
+      badge.textContent = "Pumpe aus"; badge.className = "badge off";
+      btn.textContent = "Pumpe einschalten"; btn.className = "pump-btn";
+      at.style.display = "none"; af.style.display = "none";
+      at.setAttribute("class", ""); af.setAttribute("class", "");
     }
   }
 }
@@ -177,8 +177,8 @@ class PoolCardEditor extends HTMLElement {
   constructor() {
     super();
     this._config = {};
-    this._hass   = null;
-    this._form   = null;
+    this._hass = null;
+    this._form = null;
   }
 
   connectedCallback() {
@@ -200,9 +200,9 @@ class PoolCardEditor extends HTMLElement {
   _build() {
     if (this._form || !this._hass) return;
     this._form = document.createElement("ha-form");
-    this._form.hass         = this._hass;
-    this._form.data         = this._config;
-    this._form.schema       = POOL_SCHEMA;
+    this._form.hass = this._hass;
+    this._form.data = this._config;
+    this._form.schema = POOL_SCHEMA;
     this._form.computeLabel = (s) => POOL_LABELS[s.name] || s.name;
     this._form.addEventListener("value-changed", (e) => {
       e.stopPropagation();
@@ -236,8 +236,8 @@ window.customCards.push({
     if (!conn) return;
     const res = await conn.sendMessagePromise({ type: "lovelace/resources" });
     if (!res.some(r => r.url === RURL)) {
-      await conn.sendMessagePromise({ type:"lovelace/resources/create", res_type:"module", url: RURL });
+      await conn.sendMessagePromise({ type: "lovelace/resources/create", res_type: "module", url: RURL });
       console.info("[pool-custom-card] Ressource registriert – bitte Seite neu laden.");
     }
-  } catch (_) {}
+  } catch (_) { }
 })();
