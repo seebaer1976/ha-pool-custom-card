@@ -70,121 +70,158 @@ class PoolCard extends HTMLElement {
           <button class="pump-btn" id="pcc-pbtn">Pumpe einschalten</button>
         </div>
         <svg viewBox="0 0 680 370">
-          <rect width="680" height="370" fill="#141820"/>
+          <rect width="680" height="370" fill="#141820" />
 
           <!-- POOL x=185 y=222 -->
-          <path d="M24 222 L24 268 Q24 320 185 320 Q346 320 346 268 L346 222" fill="#0b2d47" stroke="#1a5580" stroke-width="1.5"/>
-          <ellipse cx="185" cy="222" rx="161" ry="62" fill="#0d3d65"/>
-          <ellipse cx="185" cy="222" rx="159" ry="60" fill="#0e4a7a"/>
-          <path d="M70 216 Q120 208 170 216 Q220 224 270 216 Q310 210 340 216" fill="none" stroke="#1a6fa0" stroke-width="1.2" opacity="0.5"/>
-          <ellipse cx="185" cy="222" rx="161" ry="62" fill="none" stroke="#2299dd" stroke-width="2"/>
-          <ellipse cx="185" cy="222" rx="161" ry="62" fill="none" stroke="#4ab8ff" stroke-width="0.5" opacity="0.4"/>
-          <rect x="210" y="162" width="4" height="62" rx="2" fill="#c8902a"/>
-          <rect x="228" y="162" width="4" height="62" rx="2" fill="#c8902a"/>
-          <rect x="208" y="174" width="26" height="3" rx="1.5" fill="#e0a830"/>
-          <rect x="208" y="187" width="26" height="3" rx="1.5" fill="#e0a830"/>
-          <rect x="208" y="200" width="26" height="3" rx="1.5" fill="#e0a830"/>
+          <path d="M24 222 L24 268 Q24 320 185 320 Q346 320 346 268 L346 222" fill="#0b2d47" stroke="#1a5580"
+            stroke-width="1.5" />
+          <ellipse cx="185" cy="222" rx="161" ry="62" fill="#0d3d65" />
+          <ellipse cx="185" cy="222" rx="159" ry="60" fill="#0e4a7a" />
+          <path d="M70 216 Q120 208 170 216 Q220 224 270 216 Q310 210 340 216" fill="none" stroke="#1a6fa0"
+            stroke-width="1.2" opacity="0.5" />
+          <ellipse cx="185" cy="222" rx="161" ry="62" fill="none" stroke="#2299dd" stroke-width="2" />
+          <ellipse cx="185" cy="222" rx="161" ry="62" fill="none" stroke="#4ab8ff" stroke-width="0.5" opacity="0.4" />
+          <rect x="210" y="162" width="4" height="62" rx="2" fill="#c8902a" />
+          <rect x="228" y="162" width="4" height="62" rx="2" fill="#c8902a" />
+          <rect x="208" y="174" width="26" height="3" rx="1.5" fill="#e0a830" />
+          <rect x="208" y="187" width="26" height="3" rx="1.5" fill="#e0a830" />
+          <rect x="208" y="200" width="26" height="3" rx="1.5" fill="#e0a830" />
           <text x="90" y="218" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6ab0d8">pH</text>
-          <text x="90" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#4ab8ff" id="pcc-ph">—</text>
-          <text x="178" y="224" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6ab0d8">Temperatur</text>
-          <text x="178" y="252" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#4ab8ff" id="pcc-temp">—°C</text>
-          <text x="278" y="218" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6ab0d8">Füllstand</text>
-          <text x="278" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#4ab8ff" id="pcc-level">—%</text>
+          <text x="90" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700"
+            fill="#4ab8ff" id="pcc-ph">—</text>
+          <text x="178" y="224" text-anchor="middle" font-family="sans-serif" font-size="11"
+            fill="#6ab0d8">Temperatur</text>
+          <text x="178" y="252" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700"
+            fill="#4ab8ff" id="pcc-temp">—°C</text>
+          <text x="278" y="218" text-anchor="middle" font-family="sans-serif" font-size="11"
+            fill="#6ab0d8">Füllstand</text>
+          <text x="278" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700"
+            fill="#4ab8ff" id="pcc-level">—%</text>
 
           <!-- SANDFILTER x=567 y=138 -->
-          <ellipse cx="567" cy="196" rx="34" ry="11" fill="#152a1e" stroke="#1a5530" stroke-width="1.2"/>
-          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122" fill="#162a1e" stroke="#1d5535" stroke-width="1.5"/>
-          <path d="M533 122 Q533 86 567 86 Q601 86 601 122" fill="#1a3025" stroke="#256640" stroke-width="1.5"/>
-          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122 Q601 86 567 86 Q533 86 533 122" fill="none" stroke="#22dd66" stroke-width="0.6" opacity="0.5"/>
-          <path d="M537 168 L537 194 Q537 205 567 205 Q597 205 597 194 L597 168 Z" fill="#1e3828" opacity="0.8"/>
-          <path d="M537 152 Q567 162 597 152 L597 168 Q567 178 537 168 Z" fill="#254030" opacity="0.6"/>
-          <circle cx="567" cy="132" r="24" fill="#0d1a12" stroke="#1d6633" stroke-width="1.5"/>
-          <circle cx="567" cy="132" r="20" fill="none" stroke="#154422" stroke-width="1"/>
+          <ellipse cx="567" cy="196" rx="34" ry="11" fill="#152a1e" stroke="#1a5530" stroke-width="1.2" />
+          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122" fill="#162a1e" stroke="#1d5535"
+            stroke-width="1.5" />
+          <path d="M533 122 Q533 86 567 86 Q601 86 601 122" fill="#1a3025" stroke="#256640" stroke-width="1.5" />
+          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122 Q601 86 567 86 Q533 86 533 122"
+            fill="none" stroke="#22dd66" stroke-width="0.6" opacity="0.5" />
+          <path d="M537 168 L537 194 Q537 205 567 205 Q597 205 597 194 L597 168 Z" fill="#1e3828" opacity="0.8" />
+          <path d="M537 152 Q567 162 597 152 L597 168 Q567 178 537 168 Z" fill="#254030" opacity="0.6" />
+          <circle cx="567" cy="132" r="24" fill="#0d1a12" stroke="#1d6633" stroke-width="1.5" />
+          <circle cx="567" cy="132" r="20" fill="none" stroke="#154422" stroke-width="1" />
           <text x="567" y="127" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">bar</text>
-          <text x="567" y="142" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#22dd66" id="pcc-pres">—</text>
+          <text x="567" y="142" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700"
+            fill="#22dd66" id="pcc-pres">—</text>
 
           <!-- VENTIL x=567 y=63 -->
-          <rect x="549" y="50" width="36" height="26" rx="4" fill="#1e3a28" stroke="#2a7040" stroke-width="1.5"/>
-          <rect x="529" y="57" width="20" height="10" rx="3" fill="#1a3020" stroke="#22aa44" stroke-width="1.5"/>
-          <circle cx="529" cy="62" r="4" fill="#0d1a10" stroke="#22dd66" stroke-width="1.2"/>
-          <rect x="585" y="57" width="20" height="10" rx="3" fill="#0d1e30" stroke="#2266aa" stroke-width="1.5"/>
-          <circle cx="605" cy="62" r="4" fill="#0a1520" stroke="#2288cc" stroke-width="1.2"/>
-          <rect x="561" y="36" width="10" height="16" rx="3" fill="#2a4a35" stroke="#3a8a50" stroke-width="1.2"/>
-          <ellipse cx="566" cy="36" rx="7" ry="3.5" fill="#2a5535" stroke="#4aaa60" stroke-width="1"/>
-          <line x1="566" y1="33" x2="555" y2="22" stroke="#4aaa60" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="553" cy="21" r="3.5" fill="#22aa44" stroke="#44cc66" stroke-width="1"/>
-          <rect x="561" y="76" width="10" height="12" rx="2" fill="#1e3a28" stroke="#2a6a3a" stroke-width="1"/>
+          <rect x="549" y="50" width="36" height="26" rx="4" fill="#1e3a28" stroke="#2a7040" stroke-width="1.5" />
+          <rect x="529" y="57" width="20" height="10" rx="3" fill="#1a3020" stroke="#22aa44" stroke-width="1.5" />
+          <circle cx="529" cy="62" r="4" fill="#0d1a10" stroke="#22dd66" stroke-width="1.2" />
+          <rect x="585" y="57" width="20" height="10" rx="3" fill="#0d1e30" stroke="#2266aa" stroke-width="1.5" />
+          <circle cx="605" cy="62" r="4" fill="#0a1520" stroke="#2288cc" stroke-width="1.2" />
+          <rect x="561" y="36" width="10" height="16" rx="3" fill="#2a4a35" stroke="#3a8a50" stroke-width="1.2" />
+          <ellipse cx="566" cy="36" rx="7" ry="3.5" fill="#2a5535" stroke="#4aaa60" stroke-width="1" />
+          <line x1="566" y1="33" x2="555" y2="22" stroke="#4aaa60" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="553" cy="21" r="3.5" fill="#22aa44" stroke="#44cc66" stroke-width="1" />
+          <rect x="561" y="76" width="10" height="12" rx="2" fill="#1e3a28" stroke="#2a6a3a" stroke-width="1" />
 
           <!-- PUMPE x=575 y=270 -->
-          <rect x="547" y="252" width="56" height="36" rx="6" fill="#1a1e30" stroke="#334488" stroke-width="1.5"/>
-          <ellipse cx="575" cy="270" rx="15" ry="15" fill="#0f1525" stroke="#2244aa" stroke-width="1.5"/>
-          <ellipse cx="575" cy="270" rx="9" ry="9" fill="#0a0f1e" stroke="#3366cc" stroke-width="1"/>
-          <ellipse cx="575" cy="270" rx="3.5" ry="3.5" fill="#1a2a4a" stroke="#4488ff" stroke-width="1"/>
-          <line x1="575" y1="262" x2="575" y2="278" stroke="#4488ff" stroke-width="1.2" opacity="0.6"/>
-          <line x1="567" y1="270" x2="583" y2="270" stroke="#4488ff" stroke-width="1.2" opacity="0.6"/>
-          <rect x="598" y="256" width="20" height="26" rx="4" fill="#161a28" stroke="#2a3060" stroke-width="1.2"/>
-          <line x1="602" y1="256" x2="602" y2="282" stroke="#2a3060" stroke-width="1"/>
-          <line x1="606" y1="256" x2="606" y2="282" stroke="#2a3060" stroke-width="1"/>
-          <line x1="610" y1="256" x2="610" y2="282" stroke="#2a3060" stroke-width="1"/>
-          <rect x="570" y="236" width="10" height="17" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2"/>
-          <ellipse cx="575" cy="270" rx="16" ry="16" fill="none" stroke="#4488ff" stroke-width="0.5" opacity="0.4"/>
-          <circle cx="603" cy="285" r="3" fill="#223" stroke="#334" id="pcc-led"/>
+          <rect x="547" y="252" width="56" height="36" rx="6" fill="#1a1e30" stroke="#334488" stroke-width="1.5" />
+          <ellipse cx="575" cy="270" rx="15" ry="15" fill="#0f1525" stroke="#2244aa" stroke-width="1.5" />
+          <ellipse cx="575" cy="270" rx="9" ry="9" fill="#0a0f1e" stroke="#3366cc" stroke-width="1" />
+          <ellipse cx="575" cy="270" rx="3.5" ry="3.5" fill="#1a2a4a" stroke="#4488ff" stroke-width="1" />
+          <line x1="575" y1="262" x2="575" y2="278" stroke="#4488ff" stroke-width="1.2" opacity="0.6" />
+          <line x1="567" y1="270" x2="583" y2="270" stroke="#4488ff" stroke-width="1.2" opacity="0.6" />
+          <rect x="598" y="256" width="20" height="26" rx="4" fill="#161a28" stroke="#2a3060" stroke-width="1.2" />
+          <line x1="602" y1="256" x2="602" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="606" y1="256" x2="606" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="610" y1="256" x2="610" y2="282" stroke="#2a3060" stroke-width="1" />
+          <rect x="570" y="236" width="10" height="17" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2" />
+          <ellipse cx="575" cy="270" rx="16" ry="16" fill="none" stroke="#4488ff" stroke-width="0.5" opacity="0.4" />
+          <circle cx="603" cy="285" r="3" fill="#223" stroke="#334" id="pcc-led" />
 
-          <!-- CHLORINATOR x=403 y=183 -->
-          <rect x="366" y="183" width="74" height="24" rx="12" fill="#d8d8d8" stroke="#aaaaaa" stroke-width="1.2"/>
-          <path d="M371 183 Q371 158 403 156 Q435 154 435 183 Z" fill="#d2d2d2" stroke="#aaaaaa" stroke-width="1.2"/>
-          <rect x="381" y="160" width="44" height="23" rx="9" fill="#2a3828" stroke="#3a5040" stroke-width="1.2"/>
-          <rect x="385" y="163" width="13" height="7" rx="2" fill="#0a1208" stroke="#1a2a18" stroke-width="0.5"/>
-          <circle cx="395" cy="167" r="3" id="pcc-chlor-led" fill="#001800" stroke="#002800"/>
-          <circle cx="406" cy="166" r="1.8" fill="#3a5038"/>
-          <circle cx="413" cy="166" r="1.8" fill="#3a5038"/>
-          <circle cx="420" cy="166" r="1.8" fill="#3a5038"/>
-          <circle cx="406" cy="174" r="1.8" fill="#3a5038"/>
-          <circle cx="413" cy="174" r="1.8" fill="#3a5038"/>
-          <circle cx="420" cy="174" r="1.8" fill="#3a5038"/>
+          <!-- CHLORINATOR x=403 y=173 -->
+          <rect x="366" y="173" width="74" height="24" rx="12" fill="#d8d8d8" stroke="#aaaaaa" stroke-width="1.2" />
+          <path d="M371 173 Q371 148 403 146 Q435 144 435 173 Z" fill="#d2d2d2" stroke="#aaaaaa" stroke-width="1.2" />
+          <rect x="381" y="150" width="44" height="23" rx="9" fill="#2a3828" stroke="#3a5040" stroke-width="1.2" />
+          <rect x="385" y="153" width="13" height="7" rx="2" fill="#0a1208" stroke="#1a2a18" stroke-width="0.5" />
+          <circle cx="395" cy="157" r="3" id="pcc-chlor-led" fill="#001800" stroke="#002800" />
+          <circle cx="406" cy="156" r="1.8" fill="#3a5038" />
+          <circle cx="413" cy="156" r="1.8" fill="#3a5038" />
+          <circle cx="420" cy="156" r="1.8" fill="#3a5038" />
+          <circle cx="406" cy="164" r="1.8" fill="#3a5038" />
+          <circle cx="413" cy="164" r="1.8" fill="#3a5038" />
+          <circle cx="420" cy="164" r="1.8" fill="#3a5038" />
           <!-- Rechter Anschluss bei x=442 -->
-          <rect x="433" y="187" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1"/>
-          <ellipse cx="439" cy="193" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5"/>
-          <ellipse cx="439" cy="193" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1"/>
+          <rect x="433" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
+          <ellipse cx="439" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
+          <ellipse cx="439" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
           <!-- Linker Anschluss bei x=364 -->
-          <rect x="355" y="187" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1"/>
-          <ellipse cx="361" cy="193" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5"/>
-          <ellipse cx="361" cy="193" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1"/>
+          <rect x="355" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
+          <ellipse cx="361" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
+          <ellipse cx="361" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
 
           <!-- LINIEN STATISCH -->
           <!-- Blau -->
-          <path d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M554 235 C554 225 554 225 554 225" fill="none" stroke="#0d2a44" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M554 235 C554 225 554 225 554 225" fill="none" stroke="#1a4a6a" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M554 225 C614 225 624 225 634 225" fill="none" stroke="#0d2a44" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M554 225 C614 225 624 225 634 225" fill="none" stroke="#1a4a6a" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M634 222 C635 248 634 84 634 63" fill="none" stroke="#0d2a44" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M634 222 C635 248 634 84 634 63" fill="none" stroke="#1a4a6a" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M634 62 C621 62 608 62 605 62" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round" />
+          <path d="M634 62 C621 62 608 62 605 62" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round" />
+          <path d="M515 269 C461 269 378 270 293 270" fill="none" stroke="#0d2a44" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M515 269 C461 269 378 270 293 270" fill="none" stroke="#1a4a6a" stroke-width="3"
+            stroke-linecap="round" />
           <!-- Grün -->
-          <path d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <path d="M380 183 C348 183 332 183 315 183" fill="none" stroke="#0a2018" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M380 183 C348 183 332 183 315 183" fill="none" stroke="#1a4028" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M425 183 C456 182 470 182 484 183" fill="none" stroke="#0a2018" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M425 183 C456 182 470 182 484 183" fill="none" stroke="#1a4028" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M484 183 C484 169 484 75 484 63" fill="none" stroke="#0a2018" stroke-width="5"
+            stroke-linecap="round" />
+          <path d="M484 183 C484 169 484 75 484 63" fill="none" stroke="#1a4028" stroke-width="3"
+            stroke-linecap="round" />
+          <path d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round" />
+          <path d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round" />
 
           <!-- ANIMIERT -->
-          <path id="pcc-p1a" d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1b" d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1c" d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1d" d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3a" d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3b" d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3c" d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3d" d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p1a" d="M515 269 C461 269 378 270 293 270" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p1b" d="M554 225 C614 225 624 225 634 225" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p1c" d="M634 222 C635 248 634 84 634 63" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p1d" d="M634 62 C621 62 608 62 605 62" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p1e" d="M605 62 C590 62 575 62 560 62" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p3a" d="M380 183 C348 183 332 183 315 183" fill="none" stroke="#22dd66" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p3b" d="M425 183 C456 182 470 182 484 183" fill="none" stroke="#22dd66" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p3c" d="M484 183 C484 169 484 75 484 63" fill="none" stroke="#22dd66" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p3d" d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#22dd66" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
 
           <!-- Durchfluss Badge auf grüner vertikaler Linie -->
-          <rect x="488" y="115" width="50" height="26" rx="6" fill="#0d1a12" stroke="#22aa44" stroke-width="1.2"/>
+          <rect x="488" y="115" width="50" height="26" rx="6" fill="#0d1a12" stroke="#22aa44" stroke-width="1.2" />
           <text x="513" y="126" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">m³/h</text>
-          <text x="513" y="137" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#22dd66" id="pcc-flow">—</text>
+          <text x="513" y="137" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700"
+            fill="#22dd66" id="pcc-flow">—</text>
         </svg>`;
 
       this.content = this.querySelector(".topbar");
@@ -244,7 +281,7 @@ class PoolCard extends HTMLElement {
     if (on !== this._lastPumpOn) {
       this._lastPumpOn = on;
       const led = g("pcc-led");
-      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d"].forEach(id => {
+      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d", "pcc-p1e"].forEach(id => {
         const el = g(id);
         el.style.display = on ? "block" : "none";
         el.style.animation = on ? "pcc-fwd 0.9s linear infinite" : "none";
