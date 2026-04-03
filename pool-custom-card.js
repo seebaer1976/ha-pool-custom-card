@@ -279,13 +279,15 @@ class PoolCard extends HTMLElement {
     if (on !== this._lastPumpOn) {
       this._lastPumpOn = on;
       const led = g("pcc-led");
-      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d", "pcc-p1e"].forEach(id => {
+      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d"].forEach(id => {
         const el = g(id);
+        if (!el) return;
         el.style.display = on ? "block" : "none";
         el.style.animation = on ? "pcc-fwd 0.9s linear infinite" : "none";
       });
       ["pcc-p3a", "pcc-p3b", "pcc-p3c", "pcc-p3d"].forEach(id => {
         const el = g(id);
+        if (!el) return;
         el.style.display = on ? "block" : "none";
         el.style.animation = on ? "pcc-bwd 0.9s linear infinite" : "none";
       });
