@@ -206,6 +206,8 @@ class PoolCard extends HTMLElement {
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
           <path id="pcc-p1d" d="M634 62 C621 62 608 62 605 62" fill="none" stroke="#2299ee" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
+          <path id="pcc-p1e" d="M554 235 C554 225 554 225 554 225" fill="none" stroke="#2299ee" stroke-width="2.5"
+            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
           <path id="pcc-p3a" d="M380 183 C348 183 332 183 315 183" fill="none" stroke="#22dd66" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
           <path id="pcc-p3b" d="M425 183 C456 182 470 182 484 183" fill="none" stroke="#22dd66" stroke-width="2.5"
@@ -279,7 +281,7 @@ class PoolCard extends HTMLElement {
     if (on !== this._lastPumpOn) {
       this._lastPumpOn = on;
       const led = g("pcc-led");
-      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d"].forEach(id => {
+      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d", "pcc-p1e"].forEach(id => {
         const el = g(id);
         if (!el) return;
         el.style.display = on ? "block" : "none";
