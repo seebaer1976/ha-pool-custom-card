@@ -127,18 +127,18 @@ class PoolCard extends HTMLElement {
 
           <!-- PUMPE x=575 y=270 -->
           <rect x="547" y="252" width="56" height="36" rx="6" fill="#1a1e30" stroke="#334488" stroke-width="1.5" />
-          <ellipse cx="575" cy="270" rx="15" ry="15" fill="#0f1525" stroke="#2244aa" stroke-width="1.5" />
-          <ellipse cx="575" cy="270" rx="9" ry="9" fill="#0a0f1e" stroke="#3366cc" stroke-width="1" />
-          <ellipse cx="575" cy="270" rx="3.5" ry="3.5" fill="#1a2a4a" stroke="#4488ff" stroke-width="1" />
-          <line x1="575" y1="262" x2="575" y2="278" stroke="#4488ff" stroke-width="1.2" opacity="0.6" />
-          <line x1="567" y1="270" x2="583" y2="270" stroke="#4488ff" stroke-width="1.2" opacity="0.6" />
-          <rect x="598" y="256" width="20" height="26" rx="4" fill="#161a28" stroke="#2a3060" stroke-width="1.2" />
-          <line x1="602" y1="256" x2="602" y2="282" stroke="#2a3060" stroke-width="1" />
-          <line x1="606" y1="256" x2="606" y2="282" stroke="#2a3060" stroke-width="1" />
-          <line x1="610" y1="256" x2="610" y2="282" stroke="#2a3060" stroke-width="1" />
-          <rect x="570" y="236" width="10" height="17" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2" />
-          <ellipse cx="575" cy="270" rx="16" ry="16" fill="none" stroke="#4488ff" stroke-width="0.5" opacity="0.4" />
-          <circle cx="603" cy="285" r="3" fill="#223" stroke="#334" id="pcc-led" />
+          <ellipse cx="547" cy="270" rx="15" ry="15" fill="#0f1525" stroke="#2244aa" stroke-width="1.5" />
+          <ellipse cx="547" cy="270" rx="9" ry="9" fill="#0a0f1e" stroke="#3366cc" stroke-width="1" />
+          <ellipse cx="547" cy="270" rx="3.5" ry="3.5" fill="#1a2a4a" stroke="#4488ff" stroke-width="1" />
+          <rect x="583" y="256" width="20" height="26" rx="4" fill="#161a28" stroke="#2a3060" stroke-width="1.2" />
+          <line x1="587" y1="256" x2="587" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="590" y1="256" x2="590" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="593" y1="256" x2="593" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="596" y1="256" x2="596" y2="282" stroke="#2a3060" stroke-width="1" />
+          <line x1="599" y1="256" x2="599" y2="282" stroke="#2a3060" stroke-width="1" />
+          <rect x="515" y="264" width="17" height="10" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2" />
+          <rect x="548" y="236" width="10" height="17" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2" />
+          <circle cx="585" cy="280" r="3" fill="#223" stroke="#334" id="pcc-led" />
 
           <!-- CHLORINATOR x=403 y=173 -->
           <rect x="366" y="173" width="74" height="24" rx="12" fill="#d8d8d8" stroke="#aaaaaa" stroke-width="1.2" />
@@ -153,13 +153,13 @@ class PoolCard extends HTMLElement {
           <circle cx="413" cy="164" r="1.8" fill="#3a5038" />
           <circle cx="420" cy="164" r="1.8" fill="#3a5038" />
           <!-- Rechter Anschluss bei x=442 -->
-          <rect x="433" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
-          <ellipse cx="439" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
-          <ellipse cx="439" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
+          <rect x="418" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
+          <ellipse cx="424" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
+          <ellipse cx="424" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
           <!-- Linker Anschluss bei x=364 -->
-          <rect x="355" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
-          <ellipse cx="361" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
-          <ellipse cx="361" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
+          <rect x="375" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
+          <ellipse cx="381" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
+          <ellipse cx="381" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
 
           <!-- LINIEN STATISCH -->
           <!-- Blau -->
@@ -205,8 +205,6 @@ class PoolCard extends HTMLElement {
           <path id="pcc-p1c" d="M634 222 C635 248 634 84 634 63" fill="none" stroke="#2299ee" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
           <path id="pcc-p1d" d="M634 62 C621 62 608 62 605 62" fill="none" stroke="#2299ee" stroke-width="2.5"
-            stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
-          <path id="pcc-p1e" d="M605 62 C590 62 575 62 560 62" fill="none" stroke="#2299ee" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
           <path id="pcc-p3a" d="M380 183 C348 183 332 183 315 183" fill="none" stroke="#22dd66" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
