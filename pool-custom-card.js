@@ -91,17 +91,17 @@ class PoolCard extends HTMLElement {
           <text x="278" y="218" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6ab0d8">Füllstand</text>
           <text x="278" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#4ab8ff" id="pcc-level">—%</text>
 
-          <!-- SANDFILTER x=570 y=138 -->
-          <ellipse cx="570" cy="196" rx="34" ry="11" fill="#152a1e" stroke="#1a5530" stroke-width="1.2"/>
-          <path d="M536 122 L536 196 Q536 207 570 207 Q604 207 604 196 L604 122" fill="#162a1e" stroke="#1d5535" stroke-width="1.5"/>
-          <path d="M536 122 Q536 86 570 86 Q604 86 604 122" fill="#1a3025" stroke="#256640" stroke-width="1.5"/>
-          <path d="M536 122 L536 196 Q536 207 570 207 Q604 207 604 196 L604 122 Q604 86 570 86 Q536 86 536 122" fill="none" stroke="#22dd66" stroke-width="0.6" opacity="0.5"/>
-          <path d="M540 168 L540 194 Q540 205 570 205 Q600 205 600 194 L600 168 Z" fill="#1e3828" opacity="0.8"/>
-          <path d="M540 152 Q570 162 600 152 L600 168 Q570 178 540 168 Z" fill="#254030" opacity="0.6"/>
-          <circle cx="570" cy="132" r="24" fill="#0d1a12" stroke="#1d6633" stroke-width="1.5"/>
-          <circle cx="570" cy="132" r="20" fill="none" stroke="#154422" stroke-width="1"/>
-          <text x="570" y="127" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">bar</text>
-          <text x="570" y="142" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#22dd66" id="pcc-pres">—</text>
+          <!-- SANDFILTER x=567 y=138 -->
+          <ellipse cx="567" cy="196" rx="34" ry="11" fill="#152a1e" stroke="#1a5530" stroke-width="1.2"/>
+          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122" fill="#162a1e" stroke="#1d5535" stroke-width="1.5"/>
+          <path d="M533 122 Q533 86 567 86 Q601 86 601 122" fill="#1a3025" stroke="#256640" stroke-width="1.5"/>
+          <path d="M533 122 L533 196 Q533 207 567 207 Q601 207 601 196 L601 122 Q601 86 567 86 Q533 86 533 122" fill="none" stroke="#22dd66" stroke-width="0.6" opacity="0.5"/>
+          <path d="M537 168 L537 194 Q537 205 567 205 Q597 205 597 194 L597 168 Z" fill="#1e3828" opacity="0.8"/>
+          <path d="M537 152 Q567 162 597 152 L597 168 Q567 178 537 168 Z" fill="#254030" opacity="0.6"/>
+          <circle cx="567" cy="132" r="24" fill="#0d1a12" stroke="#1d6633" stroke-width="1.5"/>
+          <circle cx="567" cy="132" r="20" fill="none" stroke="#154422" stroke-width="1"/>
+          <text x="567" y="127" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">bar</text>
+          <text x="567" y="142" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#22dd66" id="pcc-pres">—</text>
 
           <!-- VENTIL x=567 y=63 -->
           <rect x="549" y="50" width="36" height="26" rx="4" fill="#1e3a28" stroke="#2a7040" stroke-width="1.5"/>
@@ -142,52 +142,49 @@ class PoolCard extends HTMLElement {
           <circle cx="406" cy="174" r="1.8" fill="#3a5038"/>
           <circle cx="413" cy="174" r="1.8" fill="#3a5038"/>
           <circle cx="420" cy="174" r="1.8" fill="#3a5038"/>
-          <!-- Rechter Anschluss (vom Editor: grüne Linie kommt von rechts x=441) -->
+          <!-- Rechter Anschluss bei x=442 -->
           <rect x="433" y="187" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1"/>
           <ellipse cx="439" cy="193" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5"/>
           <ellipse cx="439" cy="193" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1"/>
-          <!-- Linker Anschluss (grüne Linie geht nach links x=364) -->
+          <!-- Linker Anschluss bei x=364 -->
           <rect x="355" y="187" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1"/>
           <ellipse cx="361" cy="193" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5"/>
           <ellipse cx="361" cy="193" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1"/>
 
-          <!-- LINIEN STATISCH – exakt aus dem Editor -->
-          <!-- Blau statisch (dunkler Hintergrund) -->
-          <path d="M586 61 C600 61 615 61 630 61" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M586 61 C600 61 615 61 630 61" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M629 60 C629 81 629 247 629 268" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M629 60 C629 81 629 247 629 268" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M629 268 C620 268 611 268 602 268" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M629 268 C620 268 611 268 602 268" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M546 270 C457 270 368 273 277 273" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
-          <path d="M546 270 C457 270 368 273 277 273" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
-
-          <!-- Grün statisch -->
-          <path d="M364 181 C345 181 326 181 307 181" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M364 181 C345 181 326 181 307 181" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M441 180 C457 180 472 180 488 180" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M441 180 C457 180 472 180 488 180" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M487 179 C487 168 486 76 486 65" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M487 179 C487 168 486 76 486 65" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
-          <path d="M484 64 C507 64 531 63 555 63" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
-          <path d="M484 64 C507 64 531 63 555 63" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <!-- LINIEN STATISCH -->
+          <!-- Blau -->
+          <path d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
+          <path d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
+          <path d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
+          <path d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#0d2a44" stroke-width="5" stroke-linecap="round"/>
+          <path d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#1a4a6a" stroke-width="3" stroke-linecap="round"/>
+          <!-- Grün -->
+          <path d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
+          <path d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <path d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
+          <path d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <path d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
+          <path d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <path d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
+          <path d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
 
           <!-- ANIMIERT -->
-          <!-- Blau fwd (Pool→Filter): alle 4 blauen Segmente -->
-          <path id="pcc-p1a" d="M546 270 C457 270 368 273 277 273" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1b" d="M629 268 C620 268 611 268 602 268" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1c" d="M629 60 C629 81 629 247 629 268" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p1d" d="M586 61 C600 61 615 61 630 61" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <!-- Grün bwd (Filter→Pool): alle 4 grünen Segmente -->
-          <path id="pcc-p3a" d="M364 181 C345 181 326 181 307 181" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3b" d="M441 180 C457 180 472 180 488 180" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3c" d="M487 179 C487 168 486 76 486 65" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
-          <path id="pcc-p3d" d="M484 64 C507 64 531 63 555 63" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p1a" d="M544 269 C461 269 378 270 293 270" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p1b" d="M604 269 C614 269 624 269 634 269" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p1c" d="M635 268 C635 248 634 84 634 63" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p1d" d="M635 62 C621 62 608 62 594 62" fill="none" stroke="#2299ee" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p3a" d="M364 183 C348 183 332 183 315 183" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p3b" d="M442 182 C456 182 470 182 484 182" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p3c" d="M484 181 C484 169 484 75 484 63" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          <path id="pcc-p3d" d="M484 63 C502 63 520 63 538 63" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
 
-          <!-- Durchfluss Badge – mittig auf grüner Linie Seg3 (vertikal) -->
-          <rect x="492" y="120" width="50" height="26" rx="6" fill="#0d1a12" stroke="#22aa44" stroke-width="1.2"/>
-          <text x="517" y="131" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">m³/h</text>
-          <text x="517" y="142" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#22dd66" id="pcc-flow">—</text>
+          <!-- Durchfluss Badge auf grüner vertikaler Linie -->
+          <rect x="488" y="115" width="50" height="26" rx="6" fill="#0d1a12" stroke="#22aa44" stroke-width="1.2"/>
+          <text x="513" y="126" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">m³/h</text>
+          <text x="513" y="137" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#22dd66" id="pcc-flow">—</text>
         </svg>`;
 
       this.content = this.querySelector(".topbar");
