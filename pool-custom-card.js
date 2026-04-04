@@ -296,7 +296,7 @@ class PoolCard extends HTMLElement {
         "pcc-p3a": "pcc-fwd",
         "pcc-p3b": "pcc-bwd",
         "pcc-p3c": "pcc-bwd",
-        "pcc-p3d": "pcc-bwd",
+        "pcc-p3d": "pcc-fwd",
       };
       Object.entries({ ...blueSegs, ...greenSegs }).forEach(([id, anim]) => {
         const el = g(id);
