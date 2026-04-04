@@ -305,7 +305,7 @@ class PoolCard extends HTMLElement {
           el.style.display = "block";
           // Animation nur setzen wenn noch nicht läuft – verhindert Ruckeln
           if (!el.style.animationName || el.style.animationName === "none") {
-            el.style.animation = anim + " 5.9s linear infinite";
+            el.style.animation = anim + " 0.9s linear infinite";
           }
         } else {
           el.style.display = "none";
