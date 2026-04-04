@@ -10,14 +10,14 @@ const _loadHaComponents = () => {
 const POOL_SCHEMA = [
   { name: "title", selector: { text: {} } },
   {
-    type: "expandable", name: "required_sensors", title: "Pflichtsensoren",
+    type: "expandable", name: "required_sensors", title: "Pflichtsensoren", flatten: true,
     schema: [
       { name: "temp_entity", required: true, selector: { entity: { device_class: "temperature" } } },
       { name: "pump_entity", required: true, selector: { entity: { domain: "switch" } } },
     ],
   },
   {
-    type: "expandable", name: "optional_sensors", title: "Optionale Sensoren",
+    type: "expandable", name: "optional_sensors", title: "Optionale Sensoren", flatten: true,
     schema: [
       { name: "ph_entity", selector: { entity: { domain: "sensor" } } },
       { name: "level_entity", selector: { entity: { device_class: ["moisture", "volume", "volume_storage", "distance"] } } },
