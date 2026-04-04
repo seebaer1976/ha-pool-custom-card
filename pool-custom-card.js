@@ -284,7 +284,7 @@ class PoolCard extends HTMLElement {
       // Blau: Pool←Pumpe (p1a rechts→links=bwd), Pumpe→oben (p1b links→rechts=fwd),
       //       runter (p1c oben→unten=fwd), Ventil (p1d rechts→links=bwd), senkrecht kurz (p1e=fwd)
       const blueSegs = {
-        "pcc-p1a": "pcc-fwd",
+        "pcc-p1a": "pcc-bwd",
         "pcc-p1b": "pcc-fwd",
         "pcc-p1c": "pcc-fwd",
         "pcc-p1d": "pcc-fwd",
@@ -294,9 +294,9 @@ class PoolCard extends HTMLElement {
       //       senkrecht hoch (p3c=bwd), zum Ventil (p3d links→rechts=fwd)
       const greenSegs = {
         "pcc-p3a": "pcc-fwd",
-        "pcc-p3b": "pcc-fwd",
+        "pcc-p3b": "pcc-bwd",
         "pcc-p3c": "pcc-bwd",
-        "pcc-p3d": "pcc-fwd",
+        "pcc-p3d": "pcc-bwd",
       };
       Object.entries({ ...blueSegs, ...greenSegs }).forEach(([id, anim]) => {
         const el = g(id);
