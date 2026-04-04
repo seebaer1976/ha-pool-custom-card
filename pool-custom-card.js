@@ -10,29 +10,35 @@ const _loadHaComponents = () => {
 const POOL_SCHEMA = [
   { name: "title", selector: { text: {} } },
   {
-    type: "expandable", name: "sensors", title: "Sensoren",
+    type: "expandable", name: "required_sensors", title: "Pflichtsensoren",
     schema: [
       { name: "temp_entity", required: true, selector: { entity: { device_class: "temperature" } } },
+      { name: "pump_entity", required: true, selector: { entity: { domain: "switch" } } },
+    ],
+  },
+  {
+    type: "expandable", name: "optional_sensors", title: "Optionale Sensoren",
+    schema: [
       { name: "ph_entity", selector: { entity: { domain: "sensor" } } },
       { name: "level_entity", selector: { entity: { device_class: ["moisture", "volume", "volume_storage", "distance"] } } },
       { name: "pressure_entity", selector: { entity: { device_class: "pressure" } } },
       { name: "flow_entity", selector: { entity: { domain: "sensor" } } },
-      { name: "pump_entity", selector: { entity: { domain: "switch" } } },
-      { name: "chlor_entity", selector: { entity: { domain: "sensor" } } },
+      { name: "chlor_entity", selector: { entity: { domain: "switch" } } },
     ],
   },
 ];
 
 const POOL_LABELS = {
   title: "Kartenname",
-  sensors: "Sensoren",
+  required_sensors: "Pflichtsensoren",
+  optional_sensors: "Optionale Sensoren",
   temp_entity: "Wassertemperatur",
   ph_entity: "pH-Wert",
   level_entity: "Füllstand",
   pressure_entity: "Filterdruck",
   flow_entity: "Durchfluss (m³/h)",
   pump_entity: "Filterpumpe (Switch)",
-  chlor_entity: "Salzwassersystem (Status)",
+  chlor_entity: "Salzwassersystem (Switch)",
 };
 
 class PoolCard extends HTMLElement {
@@ -265,7 +271,7 @@ class PoolCard extends HTMLElement {
 
     // Chlorinator LED
     const chlorLed = g("pcc-chlor-led");
-    const chlorActive = chlor !== null && chlor !== "off" && chlor !== "0" && chlor !== "idle";
+    const chlorActive = chlor === "on";
     chlorLed.setAttribute("fill", chlorActive ? "#00ee44" : "#330000");
     chlorLed.setAttribute("stroke", chlorActive ? "#00ff66" : "#440000");
 
