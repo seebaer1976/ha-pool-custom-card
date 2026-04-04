@@ -281,17 +281,37 @@ class PoolCard extends HTMLElement {
     if (on !== this._lastPumpOn) {
       this._lastPumpOn = on;
       const led = g("pcc-led");
-      ["pcc-p1a", "pcc-p1b", "pcc-p1c", "pcc-p1d", "pcc-p1e"].forEach(id => {
+      // Blau: Pool←Pumpe (p1a rechts→links=bwd), Pumpe→oben (p1b links→rechts=fwd),
+      //       runter (p1c oben→unten=fwd), Ventil (p1d rechts→links=bwd), senkrecht kurz (p1e=fwd)
+      const blueSegs = {
+        "pcc-p1a": "pcc-bwd",
+        "pcc-p1b": "pcc-fwd",
+        "pcc-p1c": "pcc-fwd",
+        "pcc-p1d": "pcc-bwd",
+        "pcc-p1e": "pcc-fwd",
+      };
+      // Grün: Chlor→Pool (p3a rechts→links=bwd), Chlor→rechts (p3b links→rechts=fwd),
+      //       senkrecht hoch (p3c=bwd), zum Ventil (p3d links→rechts=fwd)
+      const greenSegs = {
+        "pcc-p3a": "pcc-bwd",
+        "pcc-p3b": "pcc-fwd",
+        "pcc-p3c": "pcc-bwd",
+        "pcc-p3d": "pcc-fwd",
+      };
+      Object.entries({ ...blueSegs, ...greenSegs }).forEach(([id, anim]) => {
         const el = g(id);
         if (!el) return;
-        el.style.display = on ? "block" : "none";
-        el.style.animation = on ? "pcc-fwd 0.9s linear infinite" : "none";
-      });
-      ["pcc-p3a", "pcc-p3b", "pcc-p3c", "pcc-p3d"].forEach(id => {
-        const el = g(id);
-        if (!el) return;
-        el.style.display = on ? "block" : "none";
-        el.style.animation = on ? "pcc-bwd 0.9s linear infinite" : "none";
+        if (on) {
+          el.style.display = "block";
+          // Animation nur setzen wenn noch nicht läuft – verhindert Ruckeln
+          if (!el.style.animationName || el.style.animationName === "none") {
+            el.style.animation = anim + " 0.9s linear infinite";
+          }
+        } else {
+          el.style.display = "none";
+          el.style.animation = "none";
+          el.style.animationName = "none";
+        }
       });
       led.setAttribute("fill", on ? "#22ff88" : "#223");
       led.setAttribute("stroke", on ? "#44ffaa" : "#334");
