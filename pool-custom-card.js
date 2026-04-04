@@ -293,10 +293,10 @@ class PoolCard extends HTMLElement {
       // Grün: Chlor→Pool (p3a rechts→links=bwd), Chlor→rechts (p3b links→rechts=fwd),
       //       senkrecht hoch (p3c=bwd), zum Ventil (p3d links→rechts=fwd)
       const greenSegs = {
-        "pcc-p3a": "pcc-bwd",
+        "pcc-p3a": "pcc-fwd",
         "pcc-p3b": "pcc-bwd",
         "pcc-p3c": "pcc-bwd",
-        "pcc-p3d": "pcc-fwd",
+        "pcc-p3d": "pcc-bwd",
       };
       Object.entries({ ...blueSegs, ...greenSegs }).forEach(([id, anim]) => {
         const el = g(id);
