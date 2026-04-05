@@ -92,17 +92,21 @@ class PoolCard extends HTMLElement {
           <rect x="208" y="174" width="26" height="3" rx="1.5" fill="#e0a830" />
           <rect x="208" y="187" width="26" height="3" rx="1.5" fill="#e0a830" />
           <rect x="208" y="200" width="26" height="3" rx="1.5" fill="#e0a830" />
+          <g id="pcc-g-ph">
           <text x="90" y="218" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6ab0d8">pH</text>
           <text x="90" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700"
             fill="#4ab8ff" id="pcc-ph">—</text>
+          </g>
           <text x="178" y="224" text-anchor="middle" font-family="sans-serif" font-size="11"
             fill="#6ab0d8">Temperatur</text>
           <text x="178" y="252" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700"
             fill="#4ab8ff" id="pcc-temp">—°C</text>
+          <g id="pcc-g-level">
           <text x="278" y="218" text-anchor="middle" font-family="sans-serif" font-size="11"
             fill="#6ab0d8">Füllstand</text>
           <text x="278" y="242" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700"
             fill="#4ab8ff" id="pcc-level">—%</text>
+          </g>
 
           <!-- SANDFILTER x=567 y=138 -->
           <ellipse cx="567" cy="196" rx="34" ry="11" fill="#152a1e" stroke="#1a5530" stroke-width="1.2" />
@@ -113,11 +117,13 @@ class PoolCard extends HTMLElement {
             fill="none" stroke="#22dd66" stroke-width="0.6" opacity="0.5" />
           <path d="M537 168 L537 194 Q537 205 567 205 Q597 205 597 194 L597 168 Z" fill="#1e3828" opacity="0.8" />
           <path d="M537 152 Q567 162 597 152 L597 168 Q567 178 537 168 Z" fill="#254030" opacity="0.6" />
+          <g id="pcc-g-pres">
           <circle cx="567" cy="132" r="24" fill="#0d1a12" stroke="#1d6633" stroke-width="1.5" />
           <circle cx="567" cy="132" r="20" fill="none" stroke="#154422" stroke-width="1" />
           <text x="567" y="127" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">bar</text>
           <text x="567" y="142" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700"
             fill="#22dd66" id="pcc-pres">—</text>
+          </g>
 
           <!-- VENTIL x=567 y=63 -->
           <rect x="549" y="50" width="36" height="26" rx="4" fill="#1e3a28" stroke="#2a7040" stroke-width="1.5" />
@@ -146,6 +152,7 @@ class PoolCard extends HTMLElement {
           <rect x="548" y="236" width="10" height="17" rx="3" fill="#141828" stroke="#2244aa" stroke-width="1.2" />
           <circle cx="585" cy="280" r="3" fill="#223" stroke="#334" id="pcc-led" />
 
+          <g id="pcc-g-chlor">
           <!-- CHLORINATOR x=403 y=173 -->
           <rect x="366" y="173" width="74" height="24" rx="12" fill="#d8d8d8" stroke="#aaaaaa" stroke-width="1.2" />
           <path d="M371 173 Q371 148 403 146 Q435 144 435 173 Z" fill="#d2d2d2" stroke="#aaaaaa" stroke-width="1.2" />
@@ -166,6 +173,7 @@ class PoolCard extends HTMLElement {
           <rect x="375" y="177" width="12" height="12" rx="3" fill="#888" stroke="#666" stroke-width="1" />
           <ellipse cx="381" cy="183" rx="5" ry="5" fill="#1a2030" stroke="#4466aa" stroke-width="1.5" />
           <ellipse cx="381" cy="183" rx="2.8" ry="2.8" fill="#0a1020" stroke="#5588cc" stroke-width="1" />
+          </g>
 
           <!-- LINIEN STATISCH -->
           <!-- Blau -->
@@ -223,6 +231,7 @@ class PoolCard extends HTMLElement {
           <path id="pcc-p3d" d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#22dd66" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
 
+          <g id="pcc-g-flow">
           <!-- Durchfluss Badge auf grüner vertikaler Linie -->
           <rect x="459" y="115" width="50" height="26" rx="6" fill="#0d1a12" stroke="#22aa44" stroke-width="1.2" />
           <text x="484" y="126" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#44bb77">m³/h</text>
@@ -268,6 +277,17 @@ class PoolCard extends HTMLElement {
     g("pcc-level").textContent = lev !== null ? Math.round(parseFloat(lev)) + "%" : "—%";
     g("pcc-pres").textContent = pres !== null ? fmt(pres) : "—";
     g("pcc-flow").textContent = flow !== null ? fmt(flow) : "—";
+
+    // Optionale Elemente nur anzeigen wenn Entity konfiguriert
+    const show = (grpId, entityKey) => {
+      const el = g(grpId);
+      if (el) el.style.display = this.config?.[entityKey] ? "" : "none";
+    };
+    show("pcc-g-ph", "ph_entity");
+    show("pcc-g-level", "level_entity");
+    show("pcc-g-pres", "pressure_entity");
+    show("pcc-g-flow", "flow_entity");
+    show("pcc-g-chlor", "chlor_entity");
 
     // Chlorinator LED
     const chlorLed = g("pcc-chlor-led");
@@ -384,4 +404,4 @@ window.customCards.push({
       console.info("[pool-custom-card] Ressource registriert – bitte Seite neu laden.");
     }
   } catch (_) { }
-})();
+})()
