@@ -211,6 +211,13 @@ class PoolCard extends HTMLElement {
           <path d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round" />
           <path d="M484 62 C502 62 520 63 529 62" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round" />
 
+          <!-- BYPASS-LINIE (nur sichtbar wenn Chlorinator ausgeblendet) -->
+          <g id="pcc-g-bypass">
+          <path d="M315 183 C370 183 430 183 484 183" fill="none" stroke="#0a2018" stroke-width="5" stroke-linecap="round"/>
+          <path d="M315 183 C370 183 430 183 484 183" fill="none" stroke="#1a4028" stroke-width="3" stroke-linecap="round"/>
+          <path id="pcc-p3bypass" d="M315 183 C370 183 430 183 484 183" fill="none" stroke="#22dd66" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" style="display:none"/>
+          </g>
+
           <!-- ANIMIERT -->
           <path id="pcc-p1a" d="M515 269 C461 269 378 270 293 270" fill="none" stroke="#2299ee" stroke-width="2.5"
             stroke-linecap="round" stroke-dasharray="8 6" style="display:none" />
@@ -288,6 +295,9 @@ class PoolCard extends HTMLElement {
     show("pcc-g-pres", "pressure_entity");
     show("pcc-g-flow", "flow_entity");
     show("pcc-g-chlor", "chlor_entity");
+    // Bypass-Linie: sichtbar wenn KEIN Chlorinator konfiguriert
+    const bypass = g("pcc-g-bypass");
+    if (bypass) bypass.style.display = this.config?.chlor_entity ? "none" : "";
 
     // Chlorinator LED
     const chlorLed = g("pcc-chlor-led");
@@ -323,6 +333,7 @@ class PoolCard extends HTMLElement {
         "pcc-p3b": "pcc-bwd",
         "pcc-p3c": "pcc-bwd",
         "pcc-p3d": "pcc-bwd",
+        "pcc-p3bypass": "pcc-bwd",
       };
       Object.entries({ ...blueSegs, ...greenSegs }).forEach(([id, anim]) => {
         const el = g(id);
