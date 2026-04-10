@@ -160,10 +160,10 @@ function poolCanvasRenderer(canvas, cfg) {
     ctx.beginPath(); ctx.ellipse(567,92,34,11,0,Math.PI,0); ctx.fillStyle="#1a3025"; ctx.fill(); ctx.strokeStyle="#256640"; ctx.lineWidth=1.5; ctx.stroke();
     rr(537,138,60,39,0); ctx.fillStyle="#1e3828"; ctx.fill();
     if (cfg.showPres) {
-      ctx.beginPath(); ctx.arc(567,102,24,0,Math.PI*2); ctx.fillStyle="#0d1a12"; ctx.fill(); ctx.strokeStyle="#1d6633"; ctx.lineWidth=1.5; ctx.stroke();
-      ctx.beginPath(); ctx.arc(567,102,20,0,Math.PI*2); ctx.strokeStyle="#154422"; ctx.lineWidth=1; ctx.stroke();
-      ctx.fillStyle="#44bb77"; ctx.font="9px sans-serif"; ctx.textAlign="center"; ctx.fillText("bar",567,97);
-      ctx.fillStyle="#22dd66"; ctx.font="bold 14px sans-serif"; ctx.fillText(cfg.pres,567,112);
+      ctx.beginPath(); ctx.arc(567,132,24,0,Math.PI*2); ctx.fillStyle="#0d1a12"; ctx.fill(); ctx.strokeStyle="#1d6633"; ctx.lineWidth=1.5; ctx.stroke();
+      ctx.beginPath(); ctx.arc(567,132,20,0,Math.PI*2); ctx.strokeStyle="#154422"; ctx.lineWidth=1; ctx.stroke();
+      ctx.fillStyle="#44bb77"; ctx.font="9px sans-serif"; ctx.textAlign="center"; ctx.fillText("bar",567,127);
+      ctx.fillStyle="#22dd66"; ctx.font="bold 14px sans-serif"; ctx.fillText(cfg.pres,567,142);
     }
 
     // 6. Ventil cx=567 y=50
