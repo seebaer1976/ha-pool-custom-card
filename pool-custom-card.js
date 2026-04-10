@@ -154,16 +154,16 @@ function poolCanvasRenderer(canvas, cfg) {
       ctx.fillStyle="#4ab8ff"; ctx.font="bold 20px sans-serif"; ctx.fillText(cfg.level,278,242);
     }
 
-    // 5. Sandfilter cx=567 (30px höher)
-    ctx.beginPath(); ctx.ellipse(567,177,34,11,0,0,Math.PI*2); ctx.fillStyle="#152a1e"; ctx.fill(); ctx.strokeStyle="#1a5530"; ctx.lineWidth=1.2; ctx.stroke();
-    rr(533,92,68,85,0); ctx.fillStyle="#162a1e"; ctx.fill(); ctx.strokeStyle="#1d5535"; ctx.lineWidth=1.5; ctx.stroke();
-    ctx.beginPath(); ctx.ellipse(567,92,34,11,0,Math.PI,0); ctx.fillStyle="#1a3025"; ctx.fill(); ctx.strokeStyle="#256640"; ctx.lineWidth=1.5; ctx.stroke();
-    rr(537,138,60,39,0); ctx.fillStyle="#1e3828"; ctx.fill();
+    // 5. Sandfilter cx=567 (32px höher)
+    ctx.beginPath(); ctx.ellipse(567,175,34,11,0,0,Math.PI*2); ctx.fillStyle="#152a1e"; ctx.fill(); ctx.strokeStyle="#1a5530"; ctx.lineWidth=1.2; ctx.stroke();
+    rr(533,90,68,85,0); ctx.fillStyle="#162a1e"; ctx.fill(); ctx.strokeStyle="#1d5535"; ctx.lineWidth=1.5; ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(567,90,34,11,0,Math.PI,0); ctx.fillStyle="#1a3025"; ctx.fill(); ctx.strokeStyle="#256640"; ctx.lineWidth=1.5; ctx.stroke();
+    rr(537,136,60,39,0); ctx.fillStyle="#1e3828"; ctx.fill();
     if (cfg.showPres) {
-      ctx.beginPath(); ctx.arc(567,143,24,0,Math.PI*2); ctx.fillStyle="#0d1a12"; ctx.fill(); ctx.strokeStyle="#1d6633"; ctx.lineWidth=1.5; ctx.stroke();
-      ctx.beginPath(); ctx.arc(567,143,20,0,Math.PI*2); ctx.strokeStyle="#154422"; ctx.lineWidth=1; ctx.stroke();
-      ctx.fillStyle="#44bb77"; ctx.font="9px sans-serif"; ctx.textAlign="center"; ctx.fillText("bar",567,138);
-      ctx.fillStyle="#22dd66"; ctx.font="bold 14px sans-serif"; ctx.fillText(cfg.pres,567,153);
+      ctx.beginPath(); ctx.arc(567,139,24,0,Math.PI*2); ctx.fillStyle="#0d1a12"; ctx.fill(); ctx.strokeStyle="#1d6633"; ctx.lineWidth=1.5; ctx.stroke();
+      ctx.beginPath(); ctx.arc(567,139,20,0,Math.PI*2); ctx.strokeStyle="#154422"; ctx.lineWidth=1; ctx.stroke();
+      ctx.fillStyle="#44bb77"; ctx.font="9px sans-serif"; ctx.textAlign="center"; ctx.fillText("bar",567,134);
+      ctx.fillStyle="#22dd66"; ctx.font="bold 14px sans-serif"; ctx.fillText(cfg.pres,567,149);
     }
 
     // 6. Ventil cx=567 y=50
